@@ -13,6 +13,8 @@
 		E123206321A1CDD900304F59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E123206121A1CDD900304F59 /* Main.storyboard */; };
 		E123206521A1CDDE00304F59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E123206421A1CDDE00304F59 /* Assets.xcassets */; };
 		E123206821A1CDDE00304F59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E123206621A1CDDE00304F59 /* LaunchScreen.storyboard */; };
+		E138C27221AF066100BE73EE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E138C27121AF066100BE73EE /* TableViewController.swift */; };
+		E138C27421AF097100BE73EE /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E138C27321AF097100BE73EE /* TableViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		E123206421A1CDDE00304F59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E123206721A1CDDE00304F59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E123206921A1CDDE00304F59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E138C27121AF066100BE73EE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E138C27321AF097100BE73EE /* TableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
 		F1BB28BF44361B39AD2429C5 /* Pods-Demo-RxFlow-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-RxFlow-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo-RxFlow-App/Pods-Demo-RxFlow-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +82,7 @@
 		E123205C21A1CDD800304F59 /* Demo-RxFlow-App */ = {
 			isa = PBXGroup;
 			children = (
+				E138C27021AF05C600BE73EE /* TableView */,
 				E123205D21A1CDD800304F59 /* AppDelegate.swift */,
 				E123205F21A1CDD800304F59 /* ViewController.swift */,
 				E123206121A1CDD900304F59 /* Main.storyboard */,
@@ -86,6 +91,15 @@
 				E123206921A1CDDE00304F59 /* Info.plist */,
 			);
 			path = "Demo-RxFlow-App";
+			sourceTree = "<group>";
+		};
+		E138C27021AF05C600BE73EE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E138C27121AF066100BE73EE /* TableViewController.swift */,
+				E138C27321AF097100BE73EE /* TableViewViewModel.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E138C27421AF097100BE73EE /* TableViewViewModel.swift in Sources */,
 				E123206021A1CDD800304F59 /* ViewController.swift in Sources */,
 				E123205E21A1CDD800304F59 /* AppDelegate.swift in Sources */,
+				E138C27221AF066100BE73EE /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
