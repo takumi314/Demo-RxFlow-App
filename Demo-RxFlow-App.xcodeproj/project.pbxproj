@@ -113,6 +113,7 @@
 				E123205621A1CDD800304F59 /* Sources */,
 				E123205721A1CDD800304F59 /* Frameworks */,
 				E123205821A1CDD800304F59 /* Resources */,
+				E138C27521B19D8300BE73EE /* ShellScript */,
 				97589D229B37151D24A8B403 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -220,6 +221,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo-RxFlow-App/Pods-Demo-RxFlow-App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E138C27521B19D8300BE73EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "find \"${SRCROOT}/Pods\" -type f -name *frameworks.sh -exec bash -c \"touch \\\"{}\\\"\" \\;\n# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
