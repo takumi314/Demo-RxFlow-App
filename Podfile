@@ -7,5 +7,6 @@ target 'Demo-RxFlow-App' do
 
   # Pods for Demo-RxFlow-App
   pod 'RxFlow'
+  pod 'Reusable'
 
 end

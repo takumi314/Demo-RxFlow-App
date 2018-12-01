@@ -15,6 +15,7 @@
 		E123206821A1CDDE00304F59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E123206621A1CDDE00304F59 /* LaunchScreen.storyboard */; };
 		E138C27221AF066100BE73EE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E138C27121AF066100BE73EE /* TableViewController.swift */; };
 		E138C27421AF097100BE73EE /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E138C27321AF097100BE73EE /* TableViewViewModel.swift */; };
+		E1BF448E21B27CC000FE0ED6 /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF448D21B27CC000FE0ED6 /* ViewModelBased.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E123206921A1CDDE00304F59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E138C27121AF066100BE73EE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E138C27321AF097100BE73EE /* TableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
+		E1BF448D21B27CC000FE0ED6 /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
 		F1BB28BF44361B39AD2429C5 /* Pods-Demo-RxFlow-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-RxFlow-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo-RxFlow-App/Pods-Demo-RxFlow-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 		E123205C21A1CDD800304F59 /* Demo-RxFlow-App */ = {
 			isa = PBXGroup;
 			children = (
+				E1BF448C21B27C5600FE0ED6 /* Protocols */,
 				E138C27021AF05C600BE73EE /* TableView */,
 				E123205D21A1CDD800304F59 /* AppDelegate.swift */,
 				E123205F21A1CDD800304F59 /* ViewController.swift */,
@@ -100,6 +103,14 @@
 				E138C27321AF097100BE73EE /* TableViewViewModel.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		E1BF448C21B27C5600FE0ED6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E1BF448D21B27CC000FE0ED6 /* ViewModelBased.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Demo-RxFlow-App/Pods-Demo-RxFlow-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxFlow/RxFlow.framework",
@@ -212,6 +224,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxFlow.framework",
@@ -249,6 +262,7 @@
 				E138C27421AF097100BE73EE /* TableViewViewModel.swift in Sources */,
 				E123206021A1CDD800304F59 /* ViewController.swift in Sources */,
 				E123205E21A1CDD800304F59 /* AppDelegate.swift in Sources */,
+				E1BF448E21B27CC000FE0ED6 /* ViewModelBased.swift in Sources */,
 				E138C27221AF066100BE73EE /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
