@@ -9,8 +9,17 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RxFlow
 
-class TableViewViewModel {
+protocol ListService { }
+
+struct NoneService: ListService { }
+
+class TableViewViewModel: ServicesViewModel {
+    typealias Services = ListService
+
+    var services: ListService!
+
 
     // MARK: - Private properties
 
@@ -38,4 +47,8 @@ class TableViewViewModel {
         
     }
 
+}
+
+extension TableViewViewModel: Stepper {
+    
 }

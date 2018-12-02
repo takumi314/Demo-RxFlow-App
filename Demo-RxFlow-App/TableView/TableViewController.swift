@@ -9,16 +9,27 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import Reusable
 
-final class TableViewController: UIViewController {
+final class TableViewController: UIViewController, ViewModelBased, StoryboardBased {
 
     @IBOutlet weak var tableView: UITableView!
 
-    private let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
-    private var viewModel: TableViewViewModel!
+    var viewModel: TableViewViewModel!
+
+    private let addButton: UIBarButtonItem!
     private let cellIdentifier = "Cell"
     private let disposeBag = DisposeBag()
-    
+
+    init(addItemTap: UIBarButtonItem) {
+        self.addButton = addItemTap
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
