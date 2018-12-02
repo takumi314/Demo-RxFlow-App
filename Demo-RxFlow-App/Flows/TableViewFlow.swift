@@ -15,7 +15,11 @@ class TableViewFlow: Flow {
         return self.rootViewController
     }
 
-    private let rootViewController = UINavigationController()
+    private lazy var rootViewController: UINavigationController = {
+        let viewController = UINavigationController()
+        viewController.navigationBar.topItem?.title = "TableView"
+        return viewController
+    }()
     private let services: AppServices
 
     // MARK: - Initializer
@@ -41,12 +45,10 @@ class TableViewFlow: Flow {
 
     func navigationToTableViewScreen() -> NextFlowItems {
         let viewController = TableViewController.instantiate()
-        let addItemTap = UIBarButtonItem(barButtonSystemItem: .add, target: viewController, action: nil)
-        let tableViewViewModel = TableViewViewModel(addItemTap: addItemTap.rx.tap.asDriver())
+        let tableViewViewModel = TableViewViewModel(addItemTap: viewController.addButton.rx.tap.asDriver())
         viewController.viewModel = tableViewViewModel
-        
 
-        rootViewController.pushViewController(viewController, animated: true)
+        rootViewController.setViewControllers([viewController], animated: false)
 
         return .one(flowItem: NextFlowItem(nextPresentable: viewController, nextStepper: viewController.viewModel))
     }

@@ -17,23 +17,15 @@ final class TableViewController: UIViewController, ViewModelBased, StoryboardBas
 
     var viewModel: TableViewViewModel!
 
-    private let addButton: UIBarButtonItem!
+    var addButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+
     private let cellIdentifier = "Cell"
     private let disposeBag = DisposeBag()
-
-    init(addItemTap: UIBarButtonItem) {
-        self.addButton = addItemTap
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupViewModel()
+//        setupViewModel()
         setupAddButton()
         setupTableView()
         setupTableViewBinding()
@@ -52,7 +44,7 @@ final class TableViewController: UIViewController, ViewModelBased, StoryboardBas
         tableView.delegate = nil
         tableView.dataSource = nil
 
-        tableView.tableFooterView = UIView() //Prevent empty rows
+        tableView.tableFooterView = UIView() // Prevent empty rows
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
 

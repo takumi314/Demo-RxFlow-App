@@ -12,7 +12,7 @@
 		E10B2AD021B321B700EA1A2A /* TableViewFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B2ACF21B321B700EA1A2A /* TableViewFlow.swift */; };
 		E123205E21A1CDD800304F59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E123205D21A1CDD800304F59 /* AppDelegate.swift */; };
 		E123206021A1CDD800304F59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E123205F21A1CDD800304F59 /* ViewController.swift */; };
-		E123206321A1CDD900304F59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E123206121A1CDD900304F59 /* Main.storyboard */; };
+		E123206321A1CDD900304F59 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E123206121A1CDD900304F59 /* TableViewController.storyboard */; };
 		E123206521A1CDDE00304F59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E123206421A1CDDE00304F59 /* Assets.xcassets */; };
 		E123206821A1CDDE00304F59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E123206621A1CDDE00304F59 /* LaunchScreen.storyboard */; };
 		E138C26E21ADAEB500BE73EE /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E138C26D21ADAEB500BE73EE /* AppFlow.swift */; };
@@ -29,7 +29,7 @@
 		E123205A21A1CDD800304F59 /* Demo-RxFlow-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-RxFlow-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E123205D21A1CDD800304F59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E123205F21A1CDD800304F59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E123206221A1CDD900304F59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E123206221A1CDD900304F59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TableViewController.storyboard; sourceTree = "<group>"; };
 		E123206421A1CDDE00304F59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E123206721A1CDDE00304F59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E123206921A1CDDE00304F59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +95,6 @@
 				E138C26F21ADB0ED00BE73EE /* Flows */,
 				E123205D21A1CDD800304F59 /* AppDelegate.swift */,
 				E123205F21A1CDD800304F59 /* ViewController.swift */,
-				E123206121A1CDD900304F59 /* Main.storyboard */,
 				E123206421A1CDDE00304F59 /* Assets.xcassets */,
 				E123206621A1CDDE00304F59 /* LaunchScreen.storyboard */,
 				E123206921A1CDDE00304F59 /* Info.plist */,
@@ -118,6 +117,7 @@
 			children = (
 				E138C27121AF066100BE73EE /* TableViewController.swift */,
 				E138C27321AF097100BE73EE /* TableViewViewModel.swift */,
+				E123206121A1CDD900304F59 /* TableViewController.storyboard */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 			files = (
 				E123206821A1CDDE00304F59 /* LaunchScreen.storyboard in Resources */,
 				E123206521A1CDDE00304F59 /* Assets.xcassets in Resources */,
-				E123206321A1CDD900304F59 /* Main.storyboard in Resources */,
+				E123206321A1CDD900304F59 /* TableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,12 +290,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E123206121A1CDD900304F59 /* Main.storyboard */ = {
+		E123206121A1CDD900304F59 /* TableViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E123206221A1CDD900304F59 /* Base */,
 			);
-			name = Main.storyboard;
+			name = TableViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		E123206621A1CDDE00304F59 /* LaunchScreen.storyboard */ = {
