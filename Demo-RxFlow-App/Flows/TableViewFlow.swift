@@ -38,6 +38,8 @@ class TableViewFlow: Flow {
         switch step {
         case .tableView:
             return navigationToTableViewScreen()
+        case .webView(target: let scheme):
+            return navigationToWebViewScreen(target: scheme)
         default:
             return .none
         }
@@ -51,6 +53,17 @@ class TableViewFlow: Flow {
         rootViewController.setViewControllers([viewController], animated: false)
 
         return .one(flowItem: NextFlowItem(nextPresentable: viewController, nextStepper: viewController.viewModel))
+    }
+
+    func navigationToWebViewScreen(target: WebScheme) -> NextFlowItems {
+        let viewController = WebViewController.instantiate()
+        let webViewViewModel = WebViewViewModel(addItemTap: viewController.addButton.rx.tap.asDriver())
+        viewController.viewModel = webViewViewModel
+        webViewViewModel.webScheme = target
+
+        rootViewController.pushViewController(viewController, animated: false)
+
+        return .one(flowItem: NextFlowItem(nextPresentable: viewController, nextStepper: webViewViewModel))
     }
 
 }
