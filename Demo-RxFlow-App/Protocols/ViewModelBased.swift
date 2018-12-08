@@ -23,7 +23,7 @@ protocol ViewModelBased: class {
 }
 
 extension ViewModelBased where Self: StoryboardBased & UIViewController {
-    static func instantiate<ViewModelType> (withViewModel viewModel: ViewModelType) -> Self where ViewModelType == Self.ViewModelType {
+    static func instantiate<ViewModelType>(withViewModel viewModel: ViewModelType) -> Self where ViewModelType == Self.ViewModelType {
         let viewController = Self.instantiate()
         viewController.viewModel = viewModel
         return viewController
@@ -31,7 +31,7 @@ extension ViewModelBased where Self: StoryboardBased & UIViewController {
 }
 
 extension ViewModelBased where Self: StoryboardBased & UIViewController, ViewModelType: ServicesViewModel {
-    static func instantiate<ViewModelType, ServicesType> (withViewModel viewModel: ViewModelType, andServices services: ServicesType) -> Self
+    static func instantiate<ViewModelType, ServicesType>(withViewModel viewModel: ViewModelType, andServices services: ServicesType) -> Self
         where ViewModelType == Self.ViewModelType, ServicesType == Self.ViewModelType.Services {
             let viewController = Self.instantiate()
             viewController.viewModel = viewModel

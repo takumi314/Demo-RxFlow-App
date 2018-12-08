@@ -17,7 +17,6 @@ class TableViewFlow: Flow {
 
     private lazy var rootViewController: UINavigationController = {
         let viewController = UINavigationController()
-        viewController.navigationBar.topItem?.title = "TableView"
         return viewController
     }()
     private let services: AppServices

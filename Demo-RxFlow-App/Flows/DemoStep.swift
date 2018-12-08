@@ -14,7 +14,7 @@ import RxFlow
 enum DemoStep: Step {
     case splash         // for Splash
     case tableView      // for TableView
-
+    case tabBar            // for TabView
     case webView(target: WebScheme)
 }
 

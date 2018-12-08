@@ -24,6 +24,7 @@ final class TableViewController: UIViewController, ViewModelBased, StoryboardBas
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Demo App"
         // Do any additional setup after loading the view.
 //        setupViewModel()
         setupAddButton()

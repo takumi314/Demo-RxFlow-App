@@ -37,6 +37,8 @@ final class AppFlow: Flow {
         switch step {
         case .tableView:
             return navigationToTableViewScreen()
+        case .tabBar:
+            return navigationToTabBarScreen()
         default:
             return .none
         }
@@ -50,6 +52,16 @@ final class AppFlow: Flow {
         return .one(flowItem: NextFlowItem(nextPresentable: tableViewFlow,
                                            nextStepper: OneStepper(withSingleStep: DemoStep.tableView)))
     }
+
+    func navigationToTabBarScreen() -> NextFlowItems {
+        let tabBarFlow = TabBarFlow(withServices: services)
+        Flows.whenReady(flow1: tabBarFlow) { [unowned self](root) in
+            self.rootWindow.rootViewController = root
+        }
+        return .one(flowItem: NextFlowItem(nextPresentable: tabBarFlow,
+                                           nextStepper: OneStepper(withSingleStep: DemoStep.tabBar)))
+    }
+
 
 }
 

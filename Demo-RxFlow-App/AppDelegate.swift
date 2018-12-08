@@ -30,7 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // Override point for customization after application launch.
-        // window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UIViewController()
+        window?.makeKeyAndVisible()
         // listen for Coordinator mechanism is not mandatory
         guard let window = window else { return false }
 
@@ -42,7 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.appFlow = AppFlow(withWindow: window, andServices: self.appService)
 
         // The navigation begins with the AppFlow at TableView Step
-        coordinator.coordinate(flow: appFlow, withStepper: OneStepper(withSingleStep: DemoStep.tableView))
+
+        coordinator.coordinate(flow: appFlow, withStepper: OneStepper(withSingleStep: DemoStep.tabBar))
+        // coordinator.coordinate(flow: appFlow, withStepper: OneStepper(withSingleStep: DemoStep.tableView))
 
         return true
     }

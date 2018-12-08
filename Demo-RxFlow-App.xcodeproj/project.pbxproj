@@ -22,6 +22,7 @@
 		E138C27221AF066100BE73EE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E138C27121AF066100BE73EE /* TableViewController.swift */; };
 		E138C27421AF097100BE73EE /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E138C27321AF097100BE73EE /* TableViewViewModel.swift */; };
 		E1BF448E21B27CC000FE0ED6 /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF448D21B27CC000FE0ED6 /* ViewModelBased.swift */; };
+		E1E0180121BC2C1D00AB7774 /* TabFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E0180021BC2C1D00AB7774 /* TabFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		E138C27121AF066100BE73EE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E138C27321AF097100BE73EE /* TableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
 		E1BF448D21B27CC000FE0ED6 /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
+		E1E0180021BC2C1D00AB7774 /* TabFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFlow.swift; sourceTree = "<group>"; };
 		F1BB28BF44361B39AD2429C5 /* Pods-Demo-RxFlow-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-RxFlow-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo-RxFlow-App/Pods-Demo-RxFlow-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		E123205C21A1CDD800304F59 /* Demo-RxFlow-App */ = {
 			isa = PBXGroup;
 			children = (
+				E1E017FF21BC2BE300AB7774 /* TabView */,
 				E1BF448C21B27C5600FE0ED6 /* Protocols */,
 				E138C27021AF05C600BE73EE /* TableView */,
 				E10B2AD221B44FBD00EA1A2A /* WKWebView */,
@@ -125,6 +128,7 @@
 				E138C26D21ADAEB500BE73EE /* AppFlow.swift */,
 				E10B2ACD21B2FA7700EA1A2A /* DemoStep.swift */,
 				E10B2ACF21B321B700EA1A2A /* TableViewFlow.swift */,
+				E1E0180021BC2C1D00AB7774 /* TabFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -145,6 +149,13 @@
 				E1BF448D21B27CC000FE0ED6 /* ViewModelBased.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E1E017FF21BC2BE300AB7774 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				E1BF448E21B27CC000FE0ED6 /* ViewModelBased.swift in Sources */,
 				E10B2ACE21B2FA7700EA1A2A /* DemoStep.swift in Sources */,
 				E138C27221AF066100BE73EE /* TableViewController.swift in Sources */,
+				E1E0180121BC2C1D00AB7774 /* TabFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
